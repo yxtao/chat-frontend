@@ -1,0 +1,49 @@
+body{
+    background-color: antiquewhite;
+}
+
+.outerbox{
+  margin: 50px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+}
+
+.innerbox{
+   flex:  1  1  1;
+   background-color:beige;
+   margin: 10px;
+}
+
+.inputbox{
+    height: 50px;
+    margin:10px;
+    font-size: larger;
+}
+
+.btnSubmit{
+    font-size:x-large;  
+    background-color: rgb(252, 251, 220);
+    border-color:cadetblue;
+    width: 100px;
+    margin-top: 20px;
+}
+.welcome{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    font-size: large;
+    text-align: center;
+    color:darkgoldenrod;
+}
+
+.dropdown{
+    font-size: x-large;
+    color:coral;
+}
+.dropdown-content{
+    font-size:22px;
+}
+
