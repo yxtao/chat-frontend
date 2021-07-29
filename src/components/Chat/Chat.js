@@ -48,12 +48,14 @@ const Chat = ( props )=> {
           });
     }, [messages])
    
-
     const sendMessage = (event)=>{
         event.preventDefault();
         if (message) {
-            socket.emit('sendMessage', message, model, ()=> {
-                setMessage('');        
+            socket.emit('sendMessage', message, model, (info)=> {
+                setMessage('');    
+                if(info){
+                    alert(info)
+                }    
             })
         }
     }
