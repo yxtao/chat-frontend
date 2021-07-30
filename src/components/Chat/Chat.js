@@ -92,7 +92,7 @@ const Chat = ( props )=> {
     return (
         <>
         <div className = "room">
-            room {room} 
+            room {room}       
         </div>
         <div className="chatContent">
             <div className="messageBox">
@@ -112,9 +112,6 @@ const Chat = ( props )=> {
                 </div>
                 </div>
             </div>
-        </div>
-        <div className="room">
-        <button className="btnSubmit" type="submit" onClick={handleLeave}> Leave 离开 </button>
         </div>
         </>
     )
