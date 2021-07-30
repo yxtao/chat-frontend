@@ -39,7 +39,7 @@ const Joint = ()=>{
         <div className="innerbox">
             <Link onClick ={event => (!name || !room)? event.preventDefault() : null}  
                 to={`/chat?name=${name}&room=${room}&model=${modelId}`}>
-                <button className="btnSubmit" type="submit">Sign in 进入 </button>
+                <button className="btnSubmit" type="submit">Join 进入 </button>
             </Link>
         </div>
     </div>
