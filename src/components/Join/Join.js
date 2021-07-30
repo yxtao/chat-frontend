@@ -28,7 +28,9 @@ const Joint = ()=>{
             </div>  
              <div className="dropdown">
                  <select name="selectList" id="selectList" onChange={(e)=> setModelId(e.target.value)} className="dropdown-content">
-                 <option value=''>None</option>   
+                 <option value=''>English to English</option>
+                  <option value='en-ja'>English to Japanese</option> 
+                  <option value='ja-en'>Japanese to English </option>
                   <option value='en-es'>English to Spanish</option>
                   <option value="es-en">Spanish to English</option>
                   <option value="en-zh">English to Chinese</option>
