@@ -48,16 +48,18 @@ const Chat = ( props )=> {
           });
     }, [messages])
    
-    const sendMessage = (event)=>{
-        event.preventDefault();
+    const handleClick = ()=>{
         if (message) {
             socket.emit('sendMessage', message, model, (info)=> {
                 setMessage('');    
                 if(info){
-                    alert(info)
+                    alert(info);
                 }    
             })
         }
+    }
+    const handleChange = ({target}) =>{
+        setMessage(target.value)
     }
 
     const handleLeave=()=>{
@@ -75,23 +77,22 @@ const Chat = ( props )=> {
    const userStyle = {
        color:"black",
        float:"right",
-       width: "70%",
-       padding: "20px",
+       width: "90%",
+       padding:"5px",
        backgroundColor:"antiquewhite",
    }
-   if ( leave == true ) 
+   if ( leave === true ) 
     return (
     <div className = "room">
         <Link to="/">
-                <button className="btnSubmit" type="submit" > Join</button>
+                <button className="btnSubmit" type="submit" > Join 加入</button>
             </Link>
     </div>)
     
     return (
         <>
         <div className = "room">
-            room {room}  <br/>
-          <button className="btnSubmit" type="submit" onClick={handleLeave}> Leave </button>
+            room {room} 
         </div>
         <div className="chatContent">
             <div className="messageBox">
@@ -104,13 +105,18 @@ const Chat = ( props )=> {
                  </div>)}
             </div>
             <div className="inputDiv">
-                <input className="messageInput" value={message} onChange ={(event)=>setMessage(event.target.value)}
-                 onKeyPress={event => event.key ==="Enter"? sendMessage(event): null}
-                />
+                <div className = "inputDiv">
+                    <input  className="messageInput inputlist" value={message} onChange ={handleChange} />
+                <div className="inputlist sendbtn">
+                    <button onClick={handleClick}> 》</button>
+                </div>
+                </div>
             </div>
+        </div>
+        <div className="room">
+        <button className="btnSubmit" type="submit" onClick={handleLeave}> Leave 离开 </button>
         </div>
         </>
     )
 }
-
 export default Chat;

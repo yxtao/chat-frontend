@@ -2,35 +2,39 @@
     background-color: whitesmoke;
     margin: auto;
     width: 50%;
-    padding: 10px;
-    font-size: large;
+    padding: 5px;
+    font-size: medium;
     text-align: center;
     color:darkgoldenrod;
-    border: 2px solid #7fffd4;
-    
+    border: 1px solid #7fffd4;    
 }
 
 .inputDiv{
-    width: 100%;
+    width: 90%;
     align-content: center;
 }
 .messageInput{
     border: 1px solid rgb(131, 112, 7);
-    height:30px;
+    height:auto;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
+}
+.inputDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
 }
 
 .messageBox{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    padding: 10px;
 }
 .messageItem{
-    margin:10px;
-    font-size: large;
-    padding: 5px;
+    margin:1px;
+    font-size:small;
     text-align: left;
     width:100%;   
 }
@@ -43,9 +47,21 @@
 .room{
     margin: auto;
     width: 50%;
-    padding: 10px;
-    font-size:xx-large;
+    padding: 5px;
+    font-size:medium;
     text-align: center;
     color:coral;
-    border: 2px solid #7fffd4;
+    border: 1px solid #7fffd4;
+}
+
+#selectList{
+    background-color:ivory;
+}
+.inputlist{
+    margin:1px;
+    height:auto;
+}
+.sendbtn{
+    font-size: large;
+    padding:2px;
 }

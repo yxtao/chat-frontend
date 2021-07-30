@@ -4,6 +4,7 @@ body{
 
 .outerbox{
   margin: 50px;  
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,8 +28,9 @@ body{
     font-size:x-large;  
     background-color: rgb(252, 251, 220);
     border-color:cadetblue;
-    width: 100px;
+    width: auto;
     margin-top: 20px;
+    color:coral;
 }
 .welcome{
     margin: auto;

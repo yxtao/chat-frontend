@@ -13,18 +13,18 @@ const Joint = ()=>{
 
     return(
      <>
-     <div className = "welcome">Welcome to real time chatting space</div>
+     <div className = "welcome"></div>
     <div className="outerbox">
         <div className="innerbox">
-            <input className="inputbox" placeholder="Name"  type="text"  onChange={(event)=> setName(event.target.value)} required/>
+            <input className="inputbox" placeholder="Name 名字"  type="text"  onChange={(event)=> setName(event.target.value)} required/>
         </div>
         <div className="innerbox"> 
-            <input className="inputbox" placeholder="Room"  type="text"  onChange={(event)=> setRoom(event.target.value)} required/>
+            <input className="inputbox" placeholder="Room 聊天室号"  type="text"  onChange={(event)=> setRoom(event.target.value)} required/>
         </div>
        
         <div className="innerbox">
             <div className="dropdown" >
-               language choice
+               language choice 语言选择
             </div>  
              <div className="dropdown">
                  <select name="selectList" id="selectList" onChange={(e)=> setModelId(e.target.value)} className="dropdown-content">
@@ -32,14 +32,14 @@ const Joint = ()=>{
                   <option value='en-es'>English to Spanish</option>
                   <option value="es-en">Spanish to English</option>
                   <option value="en-zh">English to Chinese</option>
-                  <option value="zh-en">Chinese to English</option>
+                  <option value="zh-en">Chinese to English 中文转英文</option>
                 </select>
              </div>
         </div>
         <div className="innerbox">
             <Link onClick ={event => (!name || !room)? event.preventDefault() : null}  
                 to={`/chat?name=${name}&room=${room}&model=${modelId}`}>
-                <button className="btnSubmit" type="submit">Sign in </button>
+                <button className="btnSubmit" type="submit">Sign in 进入 </button>
             </Link>
         </div>
     </div>
