@@ -88,6 +88,16 @@ const Chat = ( props )=> {
                 <button className="btnSubmit" type="submit" > Join 加入</button>
             </Link>
     </div>)
+
+    if(messages.length===0){
+        return (
+            <>
+             <div className = "room">
+              We are setting up room {room} for you...     
+             </div>
+            </>
+        )
+    }
     
     return (
         <>
