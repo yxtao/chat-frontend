@@ -93,7 +93,7 @@ const Chat = ( props )=> {
         return (
             <>
              <div className = "room">
-              We are setting up room {room} for you...     
+              We are setting up the chat room for you...     
              </div>
             </>
         )
